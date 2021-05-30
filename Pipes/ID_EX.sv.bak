@@ -1,0 +1,32 @@
+module ID_EX(clk, exc, mem, wb, r1, r2, imm, branchDir, dest, 
+						exc_out, mem_out, wb_out, r1_out, r2_out, imm_out, branchDir_out, dest_out);
+	input logic clk;
+	input logic [5:0] exc;
+	input logic [4:0] mem;
+	input logic [1:0] wb;
+	input logic [31:0] r1;
+	input logic [31:0] r2;
+	input logic [31:0] imm;
+	input logic [26:0] branchDir;
+	input logic [3:0] dest;
+	
+	output logic [5:0] exc_out;
+	output logic [4:0] mem_out;
+	output logic [1:0] wb_out; 
+	output logic [31:0] r1_out;
+	output logic [31:0] r2_out;
+	output logic [31:0] imm_out;
+	output logic [26:0] branchDir_out;
+	output logic [3:0] dest_out;
+	
+	always @(negedge clk) begin
+		exc_out <= exc;
+		mem_out <= mem;
+		wb_out <= wb;
+		r1_out <= r1;
+		r2_out <= r2;
+		imm_out <= imm;
+		branchDir_out <= branchDir;
+		dest_out <= dest;
+	end
+endmodule 

@@ -1,0 +1,22 @@
+module EXEC_Stage (clk, exc, r1, r2, imm, resALU, NZCV);
+	input logic clk;
+	input logic [5:0] exc; 
+	input logic [31:0] r1;
+	input logic [31:0] r2;
+	input logic [31:0] imm;
+	
+	output logic [31:0] resALU;
+	output logic [3:0] NZCV;
+	
+	logic [31:0] muxAlu;
+	logic [2:0] operAlu;
+	logic [4:0] aluCrtl;
+	logic aluSrc;
+	
+	assign aluCrtl = exc[5:1];
+	assign aluSrc = exc[0];
+	
+	ALU_Control controlALU (aluCrtl, operAlu);
+	MUX_ALU exMux (r2, imm, aluSrc, muxAlu);
+	ALU aluEx(operAlu, r1, muxAlu, NZCV, resALU);
+endmodule 

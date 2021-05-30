@@ -1,0 +1,75 @@
+module Control_Unit (instr, oper1, oper2, oper3, imm, branch, EX, MEM, WB);
+	input logic [31:0] instr;
+	output logic [5:0] EX;
+	output logic [4:0] MEM;
+	output logic [1:0] WB;
+	output logic [3:0] oper1;
+	output logic [3:0] oper2;
+	output logic [3:0] oper3;
+	output logic [15:0] imm;
+	output logic [26:0] branch;
+	
+	logic [1:0] funct;
+	logic [2:0] opCode;
+	logic immInstr;
+	
+	assign funct = instr[31:30];
+	assign opCode = instr[29:27];
+	assign immInstr = instr[26];
+	
+	assign EX = instr[31:26]; 										// Func + opcode
+	assign MEM = instr[31:27];										// Func
+	assign WB[1:0] = instr[25:24];								// Select_MUX_WB + Reg_Write
+	
+	always @(instr) begin
+		case (funct)
+			2'b01 : begin												// Operaciones ALU + MOV.
+				case (immInstr)
+					1'b1: begin											// Posee Imm
+						case (opCode)
+							3'b100: begin 								// Caso de dos operandos
+								oper1 <= instr[23:20];
+								imm <= instr[15:0];
+							end
+							3'b101: begin 								// Caso de dos operandos
+								oper1 <= instr[23:20];
+								imm <= instr[15:0];
+							end
+							default: begin								// Caso de tres operandos
+								oper1 <= instr[23:20];
+								oper2 <= instr[19:16];
+								imm <= instr[15:0];
+							end
+						endcase
+					end
+					1'b0: begin	
+						case (opCode)									// No posee Imm
+							3'b100: begin  							// Caso de dos operandos
+								oper1 <= instr[23:20];
+								oper3 <= instr[19:16];
+							end
+							3'b101: begin 								// Caso de dos operandos CMP
+								oper2 <= instr[23:20];
+								oper3 <= instr[19:16];
+							end
+							default: begin								// Caso de tres operandos
+								oper1 <= instr[23:20];
+								oper2 <= instr[19:16];
+								oper3 <= instr[15:12];
+							end
+						endcase
+					end
+				endcase
+			end
+			2'b10 : begin												// Saltos
+						branch <= instr[26:0];			
+			end
+			2'b11 : begin												// Store || Load
+						oper2 <= instr[23:20];
+						oper3 <= instr[19:16];
+			end
+			default: ; 
+		endcase
+	end
+	
+endmodule 	

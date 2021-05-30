@@ -1,0 +1,24 @@
+module Fetch_Stage (clk, slc, drInstr, branch, instr, drPC_plus);
+	input logic clk;
+	input logic slc;
+	input logic [31:0] drInstr;
+	input logic [26:0] branch;
+	 
+	output logic [31:0] instr;
+	output logic [31:0] drPC_plus;
+	
+	logic [31:0] drPCInstr;
+	logic [31:0] muxPC;
+	logic [31:0] branch32;
+	
+	assign branch32[26:0] = branch;
+	assign branch32[31:27] = '0;
+	
+	MUX_PC muxPCx(drInstr, branch32, slc, muxPC);
+	 
+	PC_Register pcNext(clk, muxPC, drPCInstr);
+	
+	Fetch_Adder fAdder(1, drPCInstr, drPC_plus);
+	
+	Instr_Mem instrMem(drPCInstr, instr);
+endmodule 

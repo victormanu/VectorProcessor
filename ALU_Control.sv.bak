@@ -1,0 +1,17 @@
+module ALU_Control (exec, opALU);
+	input logic [4:0] exec;
+	output logic [2:0] opALU;
+	
+	logic [1:0] func;
+	logic [2:0] opCode;
+	
+	assign func = exec[4:3];
+	assign opCode = exec[2:0];
+	
+	always@(*) begin
+		case(func)
+			2'b01: opALU <= opCode;
+			default: opALU <= 3'b111;
+		endcase
+	end
+endmodule 	

@@ -1,0 +1,49 @@
+module ALU
+	#(parameter bits = 32)
+	 (input  logic [2:0]      S,
+	  input  logic [bits-1:0] A, B,
+	  
+	  output logic [3:0]      NZCV,
+	  output logic [bits-1:0] Y);
+	  
+	  	  
+
+	logic [bits-1:0] ALU_Result, op_Result;
+	logic [bits:0] tmp;
+	assign Y = ALU_Result; // ALU out
+	assign tmp = {1'b0, A} + {1'b0, B};	
+	always @(*)
+	begin
+	  case(S)
+		  3'b000: // Substraction			
+			  op_Result = A - B;			  
+		  3'b001: // Addition
+			  op_Result = A + B;
+		  3'b010: // Divition
+			  op_Result = A / B;
+		  3'b011: // Multiplication
+			  op_Result = A * B;
+		  3'b100: // Move
+			  op_Result = B;
+		  3'b101: // Compare
+			  op_Result = A - B;
+			default: ;
+	  endcase
+	end 
+	
+	absoluteValue absoluteU(op_Result, ALU_Result);
+	
+	// Negative Flag
+	assign NZCV[3] = op_Result[bits-1];
+	
+	// Zero Flag
+	assign NZCV[2] = (ALU_Result == 0);
+	
+	// Carryout Flag
+	assign NZCV[1] = tmp[bits];
+	
+	// oVerflow Flag
+	assign NZCV[0] = tmp[bits];
+
+
+endmodule 
