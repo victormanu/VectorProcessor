@@ -56,6 +56,7 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE ALUe/ADDER_VV.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALUe/ALU_VE.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALUe/MUX_ALU.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ALUe/ALU.sv
@@ -72,3 +73,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE MEM_Stage.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Fetch_Stage.sv
 set_global_assignment -name SYSTEMVERILOG_FILE EXEC_Stage.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Decode_Stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Data_Mem.sv

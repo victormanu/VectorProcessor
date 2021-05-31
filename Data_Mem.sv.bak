@@ -1,0 +1,27 @@
+module Data_Mem (dir, data, mem, out);
+	input logic mem;
+	input logic [20:0] dir;
+	input logic [191:0] data;
+	output logic [191:0] out;
+	
+	logic [191:0] RAM[383:0]  = '{default:192'b0};
+	
+	logic storeLoad;
+	logic byteWord;
+	
+	assign storeLoad = mem; // 0 => Load; 1 => Store
+	
+	always @(dir) begin
+		case(mem)
+			1'b0 : begin
+				$readmemh("C:/Users/victo/Desktop/pruebaQuartus/PixelsTest/image.mem", RAM);
+				out <= RAM[dir]; 
+			end 
+			1'b1 : begin
+				//$readmemh("C:/intelFPGA_lite/18.1/PipelineArqui/Arqui-1-Pipeline/dataMem.mem", RAM);
+				//RAM[dir] = data;
+				//$writememh("C:/intelFPGA_lite/18.1/PipelineArqui/Arqui-1-Pipeline/dataMem.mem", RAM);
+			end 
+		endcase
+	end 
+endmodule 

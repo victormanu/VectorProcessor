@@ -9,9 +9,8 @@ module EXEC_Stage (clk, exc, r1e, r2e, r1v, r2v, imm, resALUe, resALUve, resSum)
 	input logic [20:0] imm;
 	
 	output logic [20:0] resALUe;
-	output logic [20:0] resALUve;
-	output logic [20:0] resSum;
-	//output logic [3:0] NZCV;
+	output logic [191:0] resALUve;
+	output logic [191:0] resSum;
 	
 	logic [20:0] muxAlu;
 	logic [2:0] operAlu;
@@ -28,4 +27,6 @@ module EXEC_Stage (clk, exc, r1e, r2e, r1v, r2v, imm, resALUe, resALUve, resSum)
 	ALU_Control controlALU (aluCrtl, operAlu, flagALUe, flagALUve, flagSum);
 	MUX_ALU exMux (r2e, imm, aluSrc, muxAlu);
 	ALU aluE(r1e, muxAlu, operAlu, flagALUe, resALUe);
+	ALU_VE aluve(r1e, muxAlu, operAlu, flagALUve, resALUve);
+	ADDER_VV addVV(r1v, r2v, operAlu, flagSum, resSum);
 endmodule 
