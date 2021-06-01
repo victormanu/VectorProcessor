@@ -13,11 +13,11 @@ module ALU (op1, op2, flag, funct, result);
 			1'b1: begin
 				case(funct)
 					3'b000: // Move
-						op_Result = op2;
+						result = op2;
 					3'b010: // Addition
-						op_Result = op1 + op2;
+						result = op1 + op2;
 					3'b011: // Substraction			
-						op_Result = op1 - op2;			
+						result = op1 - op2;			
 					default: ;
 				endcase
 			end

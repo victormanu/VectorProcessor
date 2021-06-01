@@ -1,20 +1,22 @@
-module WB_Stage (clk, dest ,memData, regData, wb, salida);
+module WB_Stage (clk, dest, destType ,memData, regE, regV, wb, salida);
 	input logic clk;
 	input logic [3:0] dest;
-	input logic [31:0] memData;
-	input logic [31:0] regData;
+	input logic destType;
+	input logic [191:0] memData;
+	input logic [20:0] regE;
+	input logic [191:0] regV;
 	input logic [1:0] wb;
 	
-	output logic [31:0] salida;
+	output logic [191:0] salida;
 	
 	logic slc;
-	logic [31:0] muxOut;
-	logic [31:0] r1, r2;
+	logic [191:0] muxV;
+	logic [20:0] r1e, r2e;
+	logic [191:0] r1v, r2v;
 	
 	assign slc = wb[1];
 	
-	MUX_WB muxwb(memData, regData, slc, muxOut);
-	File_Register regBank (clk, 4'b0, 4'b0, dest, muxOut, 1'b0, 1'b1, r1, r2);
-	
-	assign salida = muxOut; 
+	MUX_WB muxwbv(memData, regV, slc, muxV);
+	File_Register regBank (clk, 4'b0, 4'b0, dest, regE, muxV, 1'b0, 1'b1, 2'b00, destType, r1e, r2e, r1v, r2v);
+	assign salida = muxV;
 endmodule  

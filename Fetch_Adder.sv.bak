@@ -1,0 +1,11 @@
+module Fetch_Adder #(N = 32)(A, B, out);
+	input logic [N-1:0] A, B;
+	output logic [N-1:0]out;
+	genvar i; // Contador
+	generate
+		adder1 supAdder (A[0], B[0], out[0]);  // Instancia del sumador de 1 bit.
+		for(i=1;i<N;i++) begin : Nbits_adder_loop
+			adder1 supAdder (A[i], B[i], out[i]); // Instancia del sumador de 1 bit.
+		end
+	endgenerate
+endmodule 

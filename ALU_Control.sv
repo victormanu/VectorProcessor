@@ -5,18 +5,17 @@ module ALU_Control (exec, opALU, operALUe, operALUve, operSum);
 	output logic operALUe;
 	output logic operALUve;
 	output logic operSum;
-	output logic muxSelect;  // 0 = Reg; 1 = Imm
 	
 	logic func;
-	logic [2:0] opCode;
+	logic [2:0] opcode;
 	
 	assign func = exec[4];
-	assign opCode = exec[3:1];
+	assign opcode = exec[3:1];
 	
 	always@(*) begin
 		case(func)
 			1'b0: begin
-				opALU <= opCode;
+				opALU <= opcode;
 				case(opcode)
 					3'b000: begin												// Operaciones MOV Escalar
 						operALUe <= 1'b1;

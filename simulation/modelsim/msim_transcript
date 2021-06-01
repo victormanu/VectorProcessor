@@ -1,0 +1,92 @@
+# Reading D:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do VectorProcessor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:12 on Jun 01,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv 
+# -- Compiling module PC_Register
+# 
+# Top level modules:
+# 	PC_Register
+# End time: 11:56:12 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:12 on Jun 01,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv 
+# -- Compiling module Fetch_Adder
+# 
+# Top level modules:
+# 	Fetch_Adder
+# End time: 11:56:12 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:12 on Jun 01,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv 
+# -- Compiling module VectorProcessor_tb
+# 
+# Top level modules:
+# 	VectorProcessor_tb
+# End time: 11:56:12 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:12 on Jun 01,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv 
+# -- Compiling module Fetch_Stage
+# 
+# Top level modules:
+# 	Fetch_Stage
+# End time: 11:56:13 on Jun 01,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:13 on Jun 01,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv 
+# -- Compiling module VectorProcessor
+# 
+# Top level modules:
+# 	VectorProcessor
+# End time: 11:56:13 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:56:13 on Jun 01,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv 
+# -- Compiling module Instr_Mem
+# 
+# Top level modules:
+# 	Instr_Mem
+# End time: 11:56:13 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.VectorProcessor_tb
+# vsim work.VectorProcessor_tb 
+# Start time: 11:56:54 on Jun 01,2021
+# Loading sv_std.std
+# Loading work.VectorProcessor_tb
+# Loading work.VectorProcessor
+# Loading work.Fetch_Stage
+# Loading work.PC_Register
+# Loading work.Fetch_Adder
+# Loading work.Instr_Mem
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv(12): [PCDPC] - Port size (21) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/fs/fAdder File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv
+add wave -position end  sim:/VectorProcessor_tb/instr
+run
+# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 2 of file "C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem". (Max is 6.)    : C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv(7)
+#    Time: 10 ps  Iteration: 2  Instance: /VectorProcessor_tb/DUT/fs/instrMem
+# '{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 843711}
+# End time: 11:59:33 on Jun 01,2021, Elapsed time: 0:02:39
+# Errors: 0, Warnings: 2

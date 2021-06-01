@@ -32,53 +32,54 @@ module Control_Unit (instr, oper1, oper2, oper3, imm, EX, MEM, WB, regType, desT
 				desType <= 1'b1;
 			end
 			1'b0 : begin
-				case(opcode)
-				3'b000: begin												// Operaciones MOV Escalar
-					oper1 <= instr[13:10];
-					imm <= instr[7:0];
-					regType <= 2'b10;								// Escalar
-					desType <= 1'b0;
-				end
-				3'b001: begin												// Operaciones MOV Escalar a vector
-					oper1 <= instr[13:10];
-					oper2 <= instr[10:8];
-					regType <= 2'b10;								// Escalar
-					desType <= 1'b1;
-				end
-				3'b010: begin												// Operaciones SUMA Escalar
-					oper1 <= instr[13:10];
-					imm <= instr[7:0];
-					regType <= 2'b10;								// Escalar
-					desType <= 1'b0;
-				end
-				3'b011: begin												// Operaciones RESTA Escalar
-					oper1 <= instr[13:10];
-					imm <= instr[7:0];
-					regType <= 2'b10;								// Escalar
-					desType <= 1'b0;
-				end
-				3'b100: begin												// Operaciones MULTIPLICACIÖN Vector Escalar
-					oper1 <= instr[13:10];
-					oper2 <= instr[10:8];
-					oper3 <= instr[7:5];
-					regType <= 2'b01;								// Vector escalar
-					desType <= 1'b1;
-				end
-				3'b101: begin												// Operaciones SUMA Vector Vector
-					oper1 <= instr[13:10];
-					oper2 <= instr[10:8];
-					oper3 <= instr[7:5];
-					regType <= 2'b11;								// Vector vector
-					desType <= 1'b1;
-				end
-				3'b110: begin												// Operaciones DIVISIÓN Vector Escalar
-					oper1 <= instr[13:10];
-					oper2 <= instr[10:8];
-					oper3 <= instr[7:5];
-					regType <= 2'b01;								// Vector escalar
-					desType <= 1'b1;
-				end
-				default: ;
+				case(opCode)
+					3'b000: begin												// Operaciones MOV Escalar
+						oper1 <= instr[13:10];
+						imm <= instr[7:0];
+						regType <= 2'b10;								// Escalar
+						desType <= 1'b0;
+					end
+					3'b001: begin												// Operaciones MOV Escalar a vector
+						oper1 <= instr[13:10];
+						oper2 <= instr[10:8];
+						regType <= 2'b10;								// Escalar
+						desType <= 1'b1;
+					end
+					3'b010: begin												// Operaciones SUMA Escalar
+						oper1 <= instr[13:10];
+						imm <= instr[7:0];
+						regType <= 2'b10;								// Escalar
+						desType <= 1'b0;
+					end
+					3'b011: begin												// Operaciones RESTA Escalar
+						oper1 <= instr[13:10];
+						imm <= instr[7:0];
+						regType <= 2'b10;								// Escalar
+						desType <= 1'b0;
+					end
+					3'b100: begin												// Operaciones MULTIPLICACIÖN Vector Escalar
+						oper1 <= instr[13:10];
+						oper2 <= instr[10:8];
+						oper3 <= instr[7:5];
+						regType <= 2'b01;								// Vector escalar
+						desType <= 1'b1;
+					end
+					3'b101: begin												// Operaciones SUMA Vector Vector
+						oper1 <= instr[13:10];
+						oper2 <= instr[10:8];
+						oper3 <= instr[7:5];
+						regType <= 2'b11;								// Vector vector
+						desType <= 1'b1;
+					end
+					3'b110: begin												// Operaciones DIVISIÓN Vector Escalar
+						oper1 <= instr[13:10];
+						oper2 <= instr[10:8];
+						oper3 <= instr[7:5];
+						regType <= 2'b01;								// Vector escalar
+						desType <= 1'b1;
+					end
+					default: ;
+				endcase
 			end
 		endcase
 	end

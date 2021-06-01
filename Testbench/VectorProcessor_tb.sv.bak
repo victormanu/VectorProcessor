@@ -1,0 +1,30 @@
+module Top_Level_tb ();
+
+	logic clk, slc;
+	logic [31:0] firstInstr;
+	
+	/*logic [31:0] r1, r2;
+	logic [31:0] instr;
+	logic [5:0] exec;
+	logic [4:0] mem;
+	logic [1:0] wb;
+	logic [31:0] resALU;
+	logic [3:0] dest_outWB;*/
+	//logic [31:0] drInstr;
+	logic [31:0] salida;
+	logic slcPC;
+	logic [31:0] instr_out;
+	
+	Top_Level DUT (clk, firstInstr, slc, slcPC, instr_out, salida); 
+	
+	initial begin 
+		slc = 0;
+		firstInstr = 0;
+	end
+	always begin
+		clk = 1'b0;
+		#10;
+		clk = ~clk;
+		#10;
+	end
+endmodule

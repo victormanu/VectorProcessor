@@ -1,8 +1,9 @@
-module File_Register(clk, A1, A2, A3, WD3, Reg_Read, Reg_write, regType, desType, r1e, r2e, r1v, r2v);
+module File_Register(clk, A1, A2, A3, wd3e, wd3v, Reg_Read, Reg_write, regType, desType, r1e, r2e, r1v, r2v);
 
 	input logic clk, Reg_Read, Reg_write;
 	input logic [3:0] A1, A2, A3;
-	input logic [20:0] WD3;
+	input logic [20:0] wd3e;
+	input logic [191:0] wd3v;
 	input logic [1:0] regType;
 	input logic desType;
 	
@@ -19,10 +20,10 @@ module File_Register(clk, A1, A2, A3, WD3, Reg_Read, Reg_write, regType, desType
 		if (Reg_write) begin						//Validación de señal de enable para la escritura.
 			case(desType)
 				1'b0: begin
-					rfe[A3] <= WD3;
+					rfe[A3] <= wd3e;
 				end
 				1'b1: begin
-					rfv[A3] <= WD3;
+					rfv[A3] <= wd3v;
 				end
 			endcase
 		end

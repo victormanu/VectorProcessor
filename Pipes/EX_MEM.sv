@@ -31,8 +31,8 @@ module EX_MEM (clk, mem, wb, r1e, r2e, r1v, r2v, resALUe, resALUve, resSum, dest
 		wb_out <= wb;
 		r1e_out <= r1e;
 		r2e_out <= r2e;
-		r1v_out <= r1v;
-		r2v_out <= r2v;
+		r1v_out <= r1v; // Dato
+		r2v_out <= r2v; // Destino
 		resALUe_out <= resALUe;
 		resALUve_out <= resALUve;
 		resSum_out <= resSum;

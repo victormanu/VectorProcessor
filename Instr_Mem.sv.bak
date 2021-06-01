@@ -1,0 +1,12 @@
+module Instr_Mem ( A, RD);
+	input logic [31:0] A;
+	output logic [31:0] RD;
+	logic [31:0] RAM[50:0]  = '{default:32'b0};	
+
+	always @(A) begin
+		$readmemh("C:/intelFPGA_lite/18.1/PipelineArqui/Arqui-1-Pipeline/memFile.mem", RAM);
+		$display("%p",RAM);
+		RD <= RAM[A];
+	end 
+
+endmodule 

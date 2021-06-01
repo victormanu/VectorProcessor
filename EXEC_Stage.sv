@@ -20,11 +20,23 @@ module EXEC_Stage (clk, exc, r1e, r2e, r1v, r2v, imm, resALUe, resALUve, resSum)
 	logic flagALUe;
 	logic flagALUve;
 	logic flagSum;
+	logic funct;
 	
 	assign aluCrtl = exc;
 	assign aluSrc = exc[0];
+	assign funct = exc[4];
 	
 	ALU_Control controlALU (aluCrtl, operAlu, flagALUe, flagALUve, flagSum);
+	
+	always @(posedge clk) begin
+		case(funct)
+			1'b0: ;
+			1'b1: begin
+				operAlu <= 3'b111;
+			end
+		endcase
+	end
+	//ALU_Control controlALU (aluCrtl, operAlu, flagALUe, flagALUve, flagSum);
 	MUX_ALU exMux (r2e, imm, aluSrc, muxAlu);
 	ALU aluE(r1e, muxAlu, operAlu, flagALUe, resALUe);
 	ALU_VE aluve(r1e, muxAlu, operAlu, flagALUve, resALUve);

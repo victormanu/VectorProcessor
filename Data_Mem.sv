@@ -9,13 +9,13 @@ module Data_Mem (dir, data, opType, out);
 	always @(dir) begin
 		case(opType)
 			1'b0 : begin
-				$readmemh("C:/Users/victo/Desktop/pruebaQuartus/PixelsTest/image.mem", RAM);
+				$readmemh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/image.mem", RAM);
 				out <= RAM[dir];
 			end
 			1'b1 : begin
-				$readmemh("C:/Users/victo/Desktop/pruebaQuartus/PixelsTest/image.mem", RAM);
+				$readmemh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/image.mem", RAM);
 				RAM[dir] = data;
-				$writememh("C:/Users/victo/Desktop/pruebaQuartus/PixelsTest/image.mem", RAM);
+				$writememh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/image.mem", RAM);
 			end
 		endcase
 	end 

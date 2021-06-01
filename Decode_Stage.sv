@@ -29,7 +29,7 @@ module Decode_Stage (clk, instr, immALU, exec, mem, wb, r1e, r2e, r1v, r2v, dest
 	
 	Control_Unit crtlUnit (instr, oper1, oper2, oper3, imm, EX, MEM, WB, regType, desType);
 	extendZero zeroExt (imm, imm21);
-	File_Register regBank (clk, oper2, oper3, oper1, 0, 1'b1, 1'b0, regType, desType, r1e, r2e, r1v, r2v);
+	File_Register regBank (clk, oper2, oper3, oper1, 0, 0, 1'b1, 1'b0, regType, desType, r1e, r2e, r1v, r2v);
 	always @(posedge clk) begin
 		exec <= EX; 
 		mem <= MEM;
