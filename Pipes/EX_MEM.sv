@@ -1,6 +1,6 @@
-module EX_MEM (clk, mem, wb, r1e, r2e, r1v, r2v, resALUe, resALUve, resSum, dest, 
+module EX_MEM (clk, mem, wb, r1e, r2e, r1v, r2v, resALUe, resALUve, resSum, dest, destType,
 					mem_out, wb_out, r1e_out, r2e_out, r1v_out, r2v_out, resALUe_out, 
-					resALUve_out, resSum_out, dest_out);
+					resALUve_out, resSum_out, dest_out, destType_out);
 					
 	input logic clk;
 	input logic [3:0] mem;
@@ -14,6 +14,7 @@ module EX_MEM (clk, mem, wb, r1e, r2e, r1v, r2v, resALUe, resALUve, resSum, dest
 	input logic [191:0] resALUve;
 	input logic [191:0] resSum;
 	input logic [3:0] dest;
+	output logic destType;
 	
 	output logic [4:0] mem_out;
 	output logic [1:0] wb_out;
@@ -25,6 +26,7 @@ module EX_MEM (clk, mem, wb, r1e, r2e, r1v, r2v, resALUe, resALUve, resSum, dest
 	output logic [191:0] resALUve_out;
 	output logic [191:0] resSum_out;
 	output logic [3:0] dest_out;
+	output logic destType_out;
 	
 	always @(negedge clk) begin
 		mem_out <= mem;

@@ -56,6 +56,11 @@ module File_Register(clk, A1, A2, A3, wd3e, wd3v, Reg_Read, Reg_write, regType, 
 					$readmemh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/regBank.mem", rfe);
 					r1e <= rfe[A3];
 				end
+				3'b101: begin
+					$readmemh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/regBank.mem", rfe);
+					r1e <= rfe[A1];
+					r2e <= rfe[A2];
+				end
 				default: ;
 			endcase
 		end

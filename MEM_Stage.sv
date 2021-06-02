@@ -1,10 +1,13 @@
-module MEM_Stage (clk, dirMem, data, mem,  data_out);
+module MEM_Stage (clk, dirMem, data, mem, resALUve, resSum, data_out, mux_out);
 	input logic clk;
 	input logic [20:0] dirMem; 
 	input logic [191:0] data;
 	input logic [3:0] mem;
+	input logic [191:0] resALUve;
+	input logic [191:0] resSum;
 	
 	output logic [191:0] data_out;
+	output logic [191:0] mux_out;
 	
 	logic opType;
 	logic [1:0] funct;
@@ -26,11 +29,12 @@ module MEM_Stage (clk, dirMem, data, mem,  data_out);
 						opType = 1; // Store
 					end
 					default: ;
-				endcase
+				endcase 
 			end
 		endcase
 	end
 	
+	MUX_MEM muxXmem(resSum, resALUve, opCode, mux_out);
 	Data_Mem dataMem(dirMem, data, opType, data_out);
 	
 	

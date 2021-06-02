@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/simulation/modelsim
 vADDER_VV
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1622618581
+Z2 !s110 1622648403
 !i10b 1
 !s100 8kTNZ1VoORkFJj>4?zA6K3
 I5SOS_<`HiBSNRJi9[78<E3
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1622618581.000000
+Z5 !s108 1622648403.000000
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv|
 !i113 1
@@ -138,9 +138,35 @@ R6
 R9
 R8
 n@control_@unit
+vData_Mem
+R1
+Z10 !s110 1622648404
+!i10b 1
+!s100 >g;AHL;jLnVoO:f]NmBdP2
+ISTYI9F4iBmRVM>2mWzf4X2
+R3
+!s105 Data_Mem_sv_unit
+S1
+R0
+w1622620854
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Data_Mem.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Data_Mem.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z11 !s108 1622648404.000000
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Data_Mem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Data_Mem.sv|
+!i113 1
+R6
+R9
+R8
+n@data_@mem
 vDecode_Stage
 R1
-Z10 !s110 1622618582
+R10
 !i10b 1
 !s100 L]SziA0^A1P`j_k3g0_kC3
 IT7lKY1mkFb=P39lRWiYYh3
@@ -156,7 +182,7 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1622618582.000000
+R11
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv|
 !i113 1
@@ -168,13 +194,13 @@ vEX_MEM
 R1
 R2
 !i10b 1
-!s100 T^M=T6hG2NP[9f`>_0lX@1
-Ia`L[R=@i>W[4:gHFe7@FC2
+!s100 MHWgPUad:G318YUGWzFB_2
+I>`jWD@B0?X`C8?j4E`<M93
 R3
 !s105 EX_MEM_sv_unit
 S1
 R0
-w1622519452
+w1622647172
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv
 L0 1
@@ -260,7 +286,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z13 !s108 1622648402.000000
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv|
 !i113 1
@@ -286,7 +312,7 @@ R4
 r1
 !s85 0
 31
-R5
+R11
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv|
 !i113 1
@@ -398,6 +424,58 @@ R6
 R9
 R8
 n@instr_@mem
+vMEM_Stage
+R1
+R10
+!i10b 1
+!s100 UUjm=FAo08mne7>0zUi^C2
+IDCSa:kC6V:z@8haRKQPcZ0
+R3
+!s105 MEM_Stage_sv_unit
+S1
+R0
+w1622648373
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv|
+!i113 1
+R6
+R9
+R8
+n@m@e@m_@stage
+vMEM_WB
+R1
+R2
+!i10b 1
+!s100 IB2an9gY`Jm49C7bKKPQ50
+I:U6[7::m6MIOVb=Q42KVm1
+R3
+!s105 MEM_WB_sv_unit
+S1
+R0
+w1622647647
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/MEM_WB.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/MEM_WB.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/MEM_WB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/MEM_WB.sv|
+!i113 1
+R6
+R12
+R8
+n@m@e@m_@w@b
 vMUX_ALU
 R1
 R2
@@ -424,9 +502,61 @@ R6
 R7
 R8
 n@m@u@x_@a@l@u
-vPC_Register
+vMUX_MEM
+R1
+R10
+!i10b 1
+!s100 gPOAE<22n@G?8`M_2_QMz1
+IL_bPdPPi;_6f2QHLnDRO]3
+R3
+!s105 MUX_MEM_sv_unit
+S1
+R0
+w1622648112
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv|
+!i113 1
+R6
+R9
+R8
+n@m@u@x_@m@e@m
+vMUX_WB
 R1
 R2
+!i10b 1
+!s100 mb6;DWILeJ:e2`>EXMhAj1
+ISCobC[ClH46h?4?oJa]ZO0
+R3
+!s105 MUX_WB_sv_unit
+S1
+R0
+w1622564191
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_WB.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_WB.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_WB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_WB.sv|
+!i113 1
+R6
+R9
+R8
+n@m@u@x_@w@b
+vPC_Register
+R1
+!s110 1622648402
 !i10b 1
 !s100 ZnO>WK@LYgCgWJS57b21C2
 I91CI=f?NG0n[VDzJa31Sl3
@@ -442,7 +572,7 @@ R4
 r1
 !s85 0
 31
-R5
+R13
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv|
 !i113 1
@@ -454,13 +584,13 @@ vVectorProcessor
 R1
 R10
 !i10b 1
-!s100 dP;jXd>o:Ek?PaVkQ;V?60
-I2nLUCB3fP:nWFLOY?QogJ2
+!s100 W`HNPX7d]H>oCaaH<4>[`3
+I=4JzDK?dTGFATN0[JT<8H0
 R3
 !s105 VectorProcessor_sv_unit
 S1
 R0
-w1622618366
+w1622648246
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv
 L0 1
@@ -480,13 +610,13 @@ vVectorProcessor_tb
 R1
 R2
 !i10b 1
-!s100 DzZo;_cB`hM7ckEmW9kU_0
-IFgh51J8aZPmKSZNF6PRj62
+!s100 fPDRc?bbf=aA7oj[X?_>21
+IhfmD>SI`LO>g68^UzZNW72
 R3
 !s105 VectorProcessor_tb_sv_unit
 S1
 R0
-w1622618562
+w1622648031
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv
 L0 1
@@ -502,3 +632,29 @@ R6
 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench
 R8
 n@vector@processor_tb
+vWB_Stage
+R1
+R10
+!i10b 1
+!s100 JWD3LG>><6>;f?XG`bXBB1
+I;HmURo:]I<6ZYHP=M]8>C1
+R3
+!s105 WB_Stage_sv_unit
+S1
+R0
+w1622647910
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/WB_Stage.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/WB_Stage.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/WB_Stage.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/WB_Stage.sv|
+!i113 1
+R6
+R9
+R8
+n@w@b_@stage

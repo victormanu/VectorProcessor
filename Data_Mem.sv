@@ -4,7 +4,7 @@ module Data_Mem (dir, data, opType, out);
 	input logic [191:0] data;
 	output logic [191:0] out;
 	
-	logic [191:0] RAM[8192:0]  = '{default:192'b0};
+	logic [191:0] RAM[100:0]  = '{default:192'b0}; // 8192
 	
 	always @(dir) begin
 		case(opType)

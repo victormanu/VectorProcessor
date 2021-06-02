@@ -1,5 +1,4 @@
-module VectorProcessor(clk, pc, 
-					wb_outm, addervv_outm, resALUe_outm, resALUve_outm, dest_outm, memData_outm);
+module VectorProcessor(clk, pc, wbEscalar, wbVector);
 	input logic clk;
 	input logic [19:0] pc;
 	//**** Fetch
@@ -49,17 +48,24 @@ module VectorProcessor(clk, pc,
 	logic [191:0] resALUve_oute;
 	logic [191:0] resSum_oute;
 	logic [3:0] dest_oute;
+	logic destType_oute;
 	
-	//**** Exec
+	//**** MEM
 	logic [191:0] data_out;
+	logic [191:0] mux_out;
 	
-	// Pipe EXEC - MEM
-	output logic [1:0] wb_outm;
-	output logic [191:0] addervv_outm;
-	input logic [20:0] resALUe_outm;
-	input logic [191:0] resALUve_outm;
-	input logic [191:0] memData_outm;
-	input logic [2:0] dest_outm;
+	// Pipe MEM - WB
+	logic [1:0] wb_outm;
+	logic [191:0] addervv_outm;
+	logic [20:0] muxMem_outm;
+	logic [191:0] resALUve_outm;
+	logic [191:0] memData_outm;
+	logic [2:0] dest_outm;
+	logic destType_outm;
+	
+	//**** MEM
+	output logic [20:0] wbEscalar;
+	output logic [191:0] wbVector;
 	
 	
 	Fetch_Stage fs(clk, pc, instr, drPC_plus);
@@ -70,13 +76,14 @@ module VectorProcessor(clk, pc,
 			exc_out, mem_out, wb_out, r1e_out, r2e_out, r1v_out, r2v_out, imm_out, dest_out, destType_out_idex);
 	EXEC_Stage execS(clk, exec, r1e_out, r2e_out, r1v_out, r2v_out, imm_out, resALUe, resALUve, resSum);
 	
-	EX_MEM pipeExecMem(clk, mem_out, wb_out, r1e_out, r2e_out, r1v_out, r2v_out, resALUe, resALUve, resSum, dest, 
+	EX_MEM pipeExecMem(clk, mem_out, wb_out, r1e_out, r2e_out, r1v_out, r2v_out, resALUe, resALUve, resSum, dest, destType_out_idex,
 					mem_oute, wb_oute, r1e_oute, r2e_oute, r1v_oute, r2v_oute, resALUe_oute, 
-					resALUve_oute, resSum_oute, dest_oute);
+					resALUve_oute, resSum_oute, dest_oute, destType_oute);
 	
-	MEM_Stage memS(clk, r2e_oute, r1v_oute, mem_oute,  data_out);
+	MEM_Stage memS(clk, r2e_oute, r1v_oute, mem_oute, resSum_oute, resALUve_oute, data_out, mux_out);
 	
-	MEM_WB pipeMemwb(clk, wb_oute, resSum_oute, resALUe_oute, resALUve_oute, data_out, dest_oute, 
-					wb_outm, addervv_outm, resALUe_outm, resALUve_outm, dest_outm, memData_outm);
+	MEM_WB pipeMemwb(clk, wb_oute, mux_out, resALUe_oute, data_out, dest_oute, destType_oute,
+					wb_outm, muxMem_outm, resALUe_outm, dest_outm, destType_outm, memData_outm);
 	
+	WB_Stage wbS(clk, dest_outm, destType_outm ,memData_outm, resALUe_outm, muxMem_outm, wb_outm, wbEscalar, wbVector);
 endmodule 

@@ -83,7 +83,14 @@ module Control_Unit (instr, oper1, oper2, oper3, imm, EX, MEM, WB, regType, desT
 						desType <= 1'b1;
 						EX[0] <= 1'b0;
 					end
-					default: ;
+					3'b111: begin												// Operaciones MULTIPLICACIÖN Escalar Escalar
+						oper1 <= instr[13:11];
+						oper2 <= instr[10:8]; 
+						oper3 <= instr[7:5];
+						regType <= 3'b101;								// Escalar escalar
+						desType <= 1'b0;
+						EX[0] <= 1'b0;
+					end
 				endcase
 			end
 		endcase
