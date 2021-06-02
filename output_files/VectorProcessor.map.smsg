@@ -1,3 +1,4 @@
+Warning (10268): Verilog HDL information at File_Register.sv(19): always construct contains both blocking and non-blocking assignments File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv Line: 19
 Info (10281): Verilog HDL Declaration information at Decode_Stage.sv(13): object "mem" differs only in case from object "MEM" in the same scope File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv Line: 13
 Info (10281): Verilog HDL Declaration information at Decode_Stage.sv(14): object "wb" differs only in case from object "WB" in the same scope File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv Line: 14
 Warning (10268): Verilog HDL information at Data_Mem.sv(9): always construct contains both blocking and non-blocking assignments File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Data_Mem.sv Line: 9

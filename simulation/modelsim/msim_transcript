@@ -12,68 +12,198 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:12 on Jun 01,2021
+# Start time: 01:23:01 on Jun 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv 
 # -- Compiling module PC_Register
 # 
 # Top level modules:
 # 	PC_Register
-# End time: 11:56:12 on Jun 01,2021, Elapsed time: 0:00:00
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:12 on Jun 01,2021
+# Start time: 01:23:01 on Jun 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv 
 # -- Compiling module Fetch_Adder
 # 
 # Top level modules:
 # 	Fetch_Adder
-# End time: 11:56:12 on Jun 01,2021, Elapsed time: 0:00:00
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:12 on Jun 01,2021
+# Start time: 01:23:01 on Jun 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv 
 # -- Compiling module VectorProcessor_tb
 # 
 # Top level modules:
 # 	VectorProcessor_tb
-# End time: 11:56:12 on Jun 01,2021, Elapsed time: 0:00:00
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv 
+# -- Compiling module ADDER_VV
+# 
+# Top level modules:
+# 	ADDER_VV
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv 
+# -- Compiling module ALU_VE
+# 
+# Top level modules:
+# 	ALU_VE
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv 
+# -- Compiling module MUX_ALU
+# 
+# Top level modules:
+# 	MUX_ALU
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv 
+# -- Compiling module ALU_Control
+# 
+# Top level modules:
+# 	ALU_Control
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/IF_ID.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/IF_ID.sv 
+# -- Compiling module IF_ID
+# 
+# Top level modules:
+# 	IF_ID
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/ID_EX.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/ID_EX.sv 
+# -- Compiling module ID_EX
+# 
+# Top level modules:
+# 	ID_EX
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv 
+# -- Compiling module EX_MEM
+# 
+# Top level modules:
+# 	EX_MEM
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/extendZero.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/extendZero.sv 
+# -- Compiling module extendZero
+# 
+# Top level modules:
+# 	extendZero
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:01 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv 
+# -- Compiling module Control_Unit
+# 
+# Top level modules:
+# 	Control_Unit
+# End time: 01:23:01 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:12 on Jun 01,2021
+# Start time: 01:23:01 on Jun 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv 
 # -- Compiling module Fetch_Stage
 # 
 # Top level modules:
 # 	Fetch_Stage
-# End time: 11:56:13 on Jun 01,2021, Elapsed time: 0:00:01
+# End time: 01:23:02 on Jun 02,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:02 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv 
+# -- Compiling module EXEC_Stage
+# 
+# Top level modules:
+# 	EXEC_Stage
+# End time: 01:23:02 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:02 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv 
+# -- Compiling module Decode_Stage
+# 
+# Top level modules:
+# 	Decode_Stage
+# End time: 01:23:02 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:13 on Jun 01,2021
+# Start time: 01:23:02 on Jun 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv 
 # -- Compiling module VectorProcessor
 # 
 # Top level modules:
 # 	VectorProcessor
-# End time: 11:56:13 on Jun 01,2021, Elapsed time: 0:00:00
+# End time: 01:23:02 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:56:13 on Jun 01,2021
+# Start time: 01:23:02 on Jun 02,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv 
 # -- Compiling module Instr_Mem
 # 
 # Top level modules:
 # 	Instr_Mem
-# End time: 11:56:13 on Jun 01,2021, Elapsed time: 0:00:00
+# End time: 01:23:02 on Jun 02,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:23:02 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv 
+# -- Compiling module File_Register
+# 
+# Top level modules:
+# 	File_Register
+# End time: 01:23:02 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.VectorProcessor_tb
 # vsim work.VectorProcessor_tb 
-# Start time: 11:56:54 on Jun 01,2021
+# Start time: 01:23:06 on Jun 02,2021
 # Loading sv_std.std
 # Loading work.VectorProcessor_tb
 # Loading work.VectorProcessor
@@ -81,12 +211,44 @@ vsim work.VectorProcessor_tb
 # Loading work.PC_Register
 # Loading work.Fetch_Adder
 # Loading work.Instr_Mem
-# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv(12): [PCDPC] - Port size (21) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv(1).
+# Loading work.IF_ID
+# Loading work.Decode_Stage
+# Loading work.Control_Unit
+# Loading work.extendZero
+# Loading work.File_Register
+# Loading work.ID_EX
+# Loading work.EXEC_Stage
+# Loading work.ALU_Control
+# Loading work.MUX_ALU
+# Loading work.ALU
+# Loading work.ALU_VE
+# Loading work.ADDER_VV
+# Loading work.EX_MEM
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv(12): [PCDPC] - Port size (20) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv(1).
 #    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/fs/fAdder File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv
-add wave -position end  sim:/VectorProcessor_tb/instr
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv(32): [PCDPC] - Port size (21) does not match connection size (32) for port 'wd3e'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/decS/regBank File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv(32): [PCDPC] - Port size (192) does not match connection size (32) for port 'wd3v'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/decS/regBank File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(41): [PCDPC] - Port size (1) does not match connection size (3) for port 'flag'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS/aluE File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(41): [PCDPC] - Port size (3) does not match connection size (1) for port 'funct'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS/aluE File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(42): [PCDPC] - Port size (192) does not match connection size (21) for port 'op1'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS/aluve File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(42): [PCDPC] - Port size (1) does not match connection size (3) for port 'flag'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS/aluve File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(42): [PCDPC] - Port size (3) does not match connection size (1) for port 'funct'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS/aluve File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(43): [PCDPC] - Port size (1) does not match connection size (3) for port 'flag'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS/addVV File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv
+# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(43): [PCDPC] - Port size (3) does not match connection size (1) for port 'funct'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS/addVV File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv
+# ** Warning: (vsim-3839) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(35): Variable '/VectorProcessor_tb/DUT/execS/operAlu', driven via a port connection, is multiply driven. See C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(29).
+#    Time: 0 ps  Iteration: 0  Instance: /VectorProcessor_tb/DUT/execS File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv
+add wave -position end  sim:/VectorProcessor_tb/mem_oute
+add wave -position end  sim:/VectorProcessor_tb/wb_oute
+add wave -position end  sim:/VectorProcessor_tb/dest_oute
 run
-# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 2 of file "C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem". (Max is 6.)    : C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv(7)
-#    Time: 10 ps  Iteration: 2  Instance: /VectorProcessor_tb/DUT/fs/instrMem
-# '{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 843711}
-# End time: 11:59:33 on Jun 01,2021, Elapsed time: 0:02:39
-# Errors: 0, Warnings: 2
+# End time: 01:23:30 on Jun 02,2021, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 11

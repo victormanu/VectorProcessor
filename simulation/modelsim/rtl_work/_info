@@ -8,43 +8,277 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/simulation/modelsim
-vFetch_Adder
+vADDER_VV
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1622570172
+Z2 !s110 1622618581
 !i10b 1
-!s100 FTT<PinXOL_;`e0d?_W_c3
-Iz[VP?LJ`P>3Rb]]zdWFQR0
+!s100 8kTNZ1VoORkFJj>4?zA6K3
+I5SOS_<`HiBSNRJi9[78<E3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 Fetch_Adder_sv_unit
+!s105 ADDER_VV_sv_unit
 S1
 R0
-w1622568005
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv
+w1622565229
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1622570172.000000
+Z5 !s108 1622618581.000000
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe
+Z8 tCvgOpt 0
+n@a@d@d@e@r_@v@v
+vALU
+R1
+R2
+!i10b 1
+!s100 dhVzzLMKI::>Q@<Cj`_871
+IiG>><Woea7gU4YgJ^k=Ef0
+R3
+!s105 ALU_sv_unit
+S1
+R0
+w1622565442
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv|
+!i113 1
+R6
+R7
+R8
+n@a@l@u
+vALU_Control
+R1
+R2
+!i10b 1
+!s100 NHWA3Xn5AjATLhBG]YoEg0
+IJl9ZoEF?C9L;FB8I67z9[3
+R3
+!s105 ALU_Control_sv_unit
+S1
+R0
+w1622566568
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv|
+!i113 1
+R6
+Z9 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor
+R8
+n@a@l@u_@control
+vALU_VE
+R1
+R2
+!i10b 1
+!s100 iT_NGMkEj=`[ZkMAm<g`22
+IKI8`NX5^P=2o3n4_YF6Hd2
+R3
+!s105 ALU_VE_sv_unit
+S1
+R0
+w1622566973
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv|
+!i113 1
+R6
+R7
+R8
+n@a@l@u_@v@e
+vControl_Unit
+R1
+R2
+!i10b 1
+!s100 K[fPQNK3TT8KMPYAzIigH0
+IC3293`[>^>m1iTck5dUVP1
+R3
+!s105 Control_Unit_sv_unit
+S1
+R0
+w1622612267
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv|
+!i113 1
+R6
+R9
+R8
+n@control_@unit
+vDecode_Stage
+R1
+Z10 !s110 1622618582
+!i10b 1
+!s100 L]SziA0^A1P`j_k3g0_kC3
+IT7lKY1mkFb=P39lRWiYYh3
+R3
+!s105 Decode_Stage_sv_unit
+S1
+R0
+w1622617135
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z11 !s108 1622618582.000000
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv|
+!i113 1
+R6
+R9
+R8
+n@decode_@stage
+vEX_MEM
+R1
+R2
+!i10b 1
+!s100 T^M=T6hG2NP[9f`>_0lX@1
+Ia`L[R=@i>W[4:gHFe7@FC2
+R3
+!s105 EX_MEM_sv_unit
+S1
+R0
+w1622519452
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/EX_MEM.sv|
+!i113 1
+R6
+Z12 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes
+R8
+n@e@x_@m@e@m
+vEXEC_Stage
+R1
+R10
+!i10b 1
+!s100 4Wk0Fj]M?^ogBG]LLhjEQ1
+IHkBbRzb3]EIzPDLozUYD_1
+R3
+!s105 EXEC_Stage_sv_unit
+S1
+R0
+w1622565401
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv|
+!i113 1
+R6
+R9
+R8
+n@e@x@e@c_@stage
+vextendZero
+R1
+R2
+!i10b 1
+!s100 L2be<9Fb9>i70<nZ3M^QB1
+I@6N;XeWIZmmYf0oO_P2gW0
+R3
+!s105 extendZero_sv_unit
+S1
+R0
+w1622397177
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/extendZero.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/extendZero.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/extendZero.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/extendZero.sv|
+!i113 1
+R6
+R9
+R8
+nextend@zero
+vFetch_Adder
+R1
+R2
+!i10b 1
+!s100 b1f]CUOLB@E6`lf3<zU>[0
+I<kh7YJn?XhznnZ:H[O7N?3
+R3
+!s105 Fetch_Adder_sv_unit
+S1
+R0
+w1622616684
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Adder.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor
-Z8 tCvgOpt 0
+R6
+R9
+R8
 n@fetch_@adder
 vFetch_Stage
 R1
-Z9 !s110 1622570173
+R10
 !i10b 1
-!s100 Ek`9cAL3SBN4_zdU=8doK2
-IQXU<:GNnfSndO06=l263Z2
+!s100 =<KBU_Na]?hoMOUe1`T`83
+IlJZQLY0L=nGGnhe22FKj^3
 R3
 !s105 Fetch_Stage_sv_unit
 S1
 R0
-w1622350385
+w1622607190
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv
 L0 1
@@ -57,20 +291,98 @@ R5
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv|
 !i113 1
 R6
-R7
+R9
 R8
 n@fetch_@stage
+vFile_Register
+R1
+R10
+!i10b 1
+!s100 kcX8mPHJ<>0?bfV^KXYA22
+I[0Mz9j`JQIFi<16n0]X:]1
+R3
+!s105 File_Register_sv_unit
+S1
+R0
+w1622616976
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv|
+!i113 1
+R6
+R9
+R8
+n@file_@register
+vID_EX
+R1
+R2
+!i10b 1
+!s100 7nKYE[?VNWkig7gMdmh<71
+Ie8G6mT;6fjz3gVNWZHz>A3
+R3
+!s105 ID_EX_sv_unit
+S1
+R0
+w1622408827
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/ID_EX.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/ID_EX.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/ID_EX.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/ID_EX.sv|
+!i113 1
+R6
+R12
+R8
+n@i@d_@e@x
+vIF_ID
+R1
+R2
+!i10b 1
+!s100 db]:>XPDPiN=53NhRh^YC2
+I?WX5>`XI8TR9OgcdN3c[F0
+R3
+!s105 IF_ID_sv_unit
+S1
+R0
+w1622607165
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/IF_ID.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/IF_ID.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/IF_ID.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Pipes/IF_ID.sv|
+!i113 1
+R6
+R12
+R8
+n@i@f_@i@d
 vInstr_Mem
 R1
-R9
+R10
 !i10b 1
-!s100 Blod[mLG7WTzhJ9DgVk5X3
-IORBL^mc:Kae>bl[gS6Ai^2
+!s100 1JdNn_`T=M[WXYR98XOhS2
+Ih7R?Ybae2[B1KUSR9XIia2
 R3
 !s105 Instr_Mem_sv_unit
 S1
 R0
-w1622570156
+w1622615816
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv
 L0 1
@@ -78,25 +390,51 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1622570173.000000
+R11
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv|
 !i113 1
 R6
-R7
+R9
 R8
 n@instr_@mem
+vMUX_ALU
+R1
+R2
+!i10b 1
+!s100 <;hSU@L4Q8?m8IPboFoXO1
+I;JQLNkmBBb1OUUR_HlD<Q1
+R3
+!s105 MUX_ALU_sv_unit
+S1
+R0
+w1622411844
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv|
+!i113 1
+R6
+R7
+R8
+n@m@u@x_@a@l@u
 vPC_Register
 R1
 R2
 !i10b 1
-!s100 @ef;eG=WILJeXDo<eKO`i2
-IZjW51a>]Fmnk_NZX2mjm51
+!s100 ZnO>WK@LYgCgWJS57b21C2
+I91CI=f?NG0n[VDzJa31Sl3
 R3
 !s105 PC_Register_sv_unit
 S1
 R0
-w1622567750
+w1622615802
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv
 L0 1
@@ -109,20 +447,20 @@ R5
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv|
 !i113 1
 R6
-R7
+R9
 R8
 n@p@c_@register
 vVectorProcessor
 R1
-R9
+R10
 !i10b 1
-!s100 V@5ZIdCG6n^N;K@zh5iEV0
-IFOlDVoDfgUO?6BfdzAdOM0
+!s100 dP;jXd>o:Ek?PaVkQ;V?60
+I2nLUCB3fP:nWFLOY?QogJ2
 R3
 !s105 VectorProcessor_sv_unit
 S1
 R0
-w1622568445
+w1622618366
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv
 L0 1
@@ -130,25 +468,25 @@ R4
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv|
 !i113 1
 R6
-R7
+R9
 R8
 n@vector@processor
 vVectorProcessor_tb
 R1
 R2
 !i10b 1
-!s100 VPWg`Rf_LofND[T[XiVba0
-IM1n>H9YNYNdW2`>nAIHAc2
+!s100 DzZo;_cB`hM7ckEmW9kU_0
+IFgh51J8aZPmKSZNF6PRj62
 R3
 !s105 VectorProcessor_tb_sv_unit
 S1
 R0
-w1622569118
+w1622618562
 8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv
 FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv
 L0 1

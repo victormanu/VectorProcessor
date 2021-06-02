@@ -1,21 +1,17 @@
 module VectorProcessor_tb ();
 
 	logic clk;
-	//logic [31:0] firstInstr;
+	logic [19:0] pc;
 	
-	/*logic [31:0] r1, r2;
-	logic [31:0] instr;
-	logic [5:0] exec;
-	logic [4:0] mem;
-	logic [1:0] wb;
-	logic [31:0] resALU;
-	logic [3:0] dest_outWB;*/
-	//logic [31:0] drInstr;
-	logic [20:0] pc;
-	logic [20:0] drPC_plus;
-	logic [20:0] instr;
+	logic [1:0] wb_outm;
+	logic [191:0] addervv_outm;
+	logic [20:0] resALUe_outm;
+	logic [191:0] resALUve_outm;
+	logic [191:0] memData_outm;
+	logic [2:0] dest_outm;
 	
-	VectorProcessor DUT(clk, pc, instr, drPC_plus);
+	VectorProcessor DUT(clk, pc, 
+					wb_outm, addervv_outm, resALUe_outm, resALUve_outm, dest_outm, memData_outm);
 	
 	initial begin 
 		pc = 0;
@@ -25,5 +21,6 @@ module VectorProcessor_tb ();
 		#10;
 		clk = ~clk;
 		#10;
+		pc = pc + 1;
 	end
-endmodule
+endmodule 

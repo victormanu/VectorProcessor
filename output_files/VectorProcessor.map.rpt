@@ -1,5 +1,5 @@
 Analysis & Elaboration report for VectorProcessor
-Tue Jun 01 11:56:06 2021
+Wed Jun 02 01:42:36 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -10,10 +10,8 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "VectorProcessor:DUT|Fetch_Stage:fs|Fetch_Adder:fAdder"
-  6. Port Connectivity Checks: "VectorProcessor:DUT"
-  7. Analysis & Elaboration Messages
-  8. Analysis & Elaboration Suppressed Messages
+  5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -40,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Jun 01 11:56:06 2021       ;
+; Analysis & Elaboration Status ; Failed - Wed Jun 02 01:42:36 2021           ;
 ; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                 ; VectorProcessor                             ;
 ; Top-level Entity Name         ; VectorProcessor_tb                          ;
@@ -158,39 +156,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "VectorProcessor:DUT|Fetch_Stage:fs|Fetch_Adder:fAdder"                                                                                                                                 ;
-+----------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                                                             ;
-+----------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; A        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (21 bits) it drives.  The 11 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; A[20..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-; A[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-; A[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
-+----------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "VectorProcessor:DUT"                                                                     ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; clk       ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; instr     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; drPC_plus ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Jun 01 11:55:58 2021
+    Info: Processing started: Wed Jun 02 01:42:25 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VectorProcessor -c VectorProcessor --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file testbench/controlunit_tb.sv
+    Info (12023): Found entity 1: ControlUnit_tb File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/ControlUnit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc_register.sv
     Info (12023): Found entity 1: PC_Register File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/PC_Register.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_mem.sv
@@ -240,52 +217,557 @@ Info (12021): Found 1 design units, including 1 entities, in source file data_me
 Info (12021): Found 1 design units, including 1 entities, in source file vectorprocessor.sv
     Info (12023): Found entity 1: VectorProcessor File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 1
 Info (12127): Elaborating entity "VectorProcessor_tb" for the top level hierarchy
-Info (12128): Elaborating entity "VectorProcessor" for hierarchy "VectorProcessor:DUT" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv Line: 18
-Info (12128): Elaborating entity "Fetch_Stage" for hierarchy "VectorProcessor:DUT|Fetch_Stage:fs" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at VectorProcessor_tb.sv(24): truncated value with size 32 to match size of target (20) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv Line: 24
+Info (12128): Elaborating entity "VectorProcessor" for hierarchy "VectorProcessor:DUT" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/VectorProcessor_tb.sv Line: 14
+Info (12128): Elaborating entity "Fetch_Stage" for hierarchy "VectorProcessor:DUT|Fetch_Stage:fs" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 65
 Info (12128): Elaborating entity "PC_Register" for hierarchy "VectorProcessor:DUT|Fetch_Stage:fs|PC_Register:pcNext" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv Line: 10
 Info (12128): Elaborating entity "Fetch_Adder" for hierarchy "VectorProcessor:DUT|Fetch_Stage:fs|Fetch_Adder:fAdder" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv Line: 12
 Info (12128): Elaborating entity "Instr_Mem" for hierarchy "VectorProcessor:DUT|Fetch_Stage:fs|Instr_Mem:instrMem" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Fetch_Stage.sv Line: 14
-Warning (10850): Verilog HDL warning at Instr_Mem.sv(7): number of words (33) in memory file does not match the number of elements in the address range [0:50] File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv Line: 7
-Warning (10230): Verilog HDL assignment warning at memFile.mem(1): truncated value with size 24 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 1
-Warning (10230): Verilog HDL assignment warning at memFile.mem(2): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 2
-Warning (10230): Verilog HDL assignment warning at memFile.mem(3): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 3
-Warning (10230): Verilog HDL assignment warning at memFile.mem(4): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 4
-Warning (10230): Verilog HDL assignment warning at memFile.mem(5): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 5
-Warning (10230): Verilog HDL assignment warning at memFile.mem(6): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 6
-Warning (10230): Verilog HDL assignment warning at memFile.mem(7): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 7
-Warning (10230): Verilog HDL assignment warning at memFile.mem(8): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 8
-Warning (10230): Verilog HDL assignment warning at memFile.mem(9): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 9
-Warning (10230): Verilog HDL assignment warning at memFile.mem(10): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 10
-Warning (10230): Verilog HDL assignment warning at memFile.mem(11): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 11
-Warning (10230): Verilog HDL assignment warning at memFile.mem(12): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 12
-Warning (10230): Verilog HDL assignment warning at memFile.mem(13): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 13
-Warning (10230): Verilog HDL assignment warning at memFile.mem(14): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 14
-Warning (10230): Verilog HDL assignment warning at memFile.mem(15): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 15
-Warning (10230): Verilog HDL assignment warning at memFile.mem(16): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 16
-Warning (10230): Verilog HDL assignment warning at memFile.mem(17): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 17
-Warning (10230): Verilog HDL assignment warning at memFile.mem(18): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 18
-Warning (10230): Verilog HDL assignment warning at memFile.mem(19): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 19
-Warning (10230): Verilog HDL assignment warning at memFile.mem(20): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 20
-Warning (10230): Verilog HDL assignment warning at memFile.mem(21): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 21
-Warning (10230): Verilog HDL assignment warning at memFile.mem(22): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 22
-Warning (10230): Verilog HDL assignment warning at memFile.mem(23): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 23
-Warning (10230): Verilog HDL assignment warning at memFile.mem(24): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 24
-Warning (10230): Verilog HDL assignment warning at memFile.mem(25): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 25
-Warning (10230): Verilog HDL assignment warning at memFile.mem(26): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 26
-Warning (10230): Verilog HDL assignment warning at memFile.mem(27): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 27
-Warning (10230): Verilog HDL assignment warning at memFile.mem(28): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 28
-Warning (10230): Verilog HDL assignment warning at memFile.mem(29): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 29
-Warning (10230): Verilog HDL assignment warning at memFile.mem(30): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 30
-Warning (10230): Verilog HDL assignment warning at memFile.mem(31): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 31
-Warning (10230): Verilog HDL assignment warning at memFile.mem(32): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 32
-Warning (10230): Verilog HDL assignment warning at memFile.mem(33): truncated value with size 32 to match size of target (21) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/memFile.mem Line: 33
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10850): Verilog HDL warning at Instr_Mem.sv(7): number of words (3) in memory file does not match the number of elements in the address range [0:19] File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Instr_Mem.sv Line: 7
+Info (12128): Elaborating entity "IF_ID" for hierarchy "VectorProcessor:DUT|IF_ID:pipeIFID" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 66
+Info (12128): Elaborating entity "Decode_Stage" for hierarchy "VectorProcessor:DUT|Decode_Stage:decS" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 67
+Info (12128): Elaborating entity "Control_Unit" for hierarchy "VectorProcessor:DUT|Decode_Stage:decS|Control_Unit:crtlUnit" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv Line: 30
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(25): variable "funct" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 25
+Warning (10235): Verilog HDL Always Construct warning at Control_Unit.sv(34): variable "opCode" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 34
+Warning (10240): Verilog HDL Always Construct warning at Control_Unit.sv(24): inferring latch(es) for variable "oper1", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at Control_Unit.sv(24): inferring latch(es) for variable "oper2", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at Control_Unit.sv(24): inferring latch(es) for variable "regType", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at Control_Unit.sv(24): inferring latch(es) for variable "desType", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at Control_Unit.sv(24): inferring latch(es) for variable "EX", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at Control_Unit.sv(24): inferring latch(es) for variable "oper3", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at Control_Unit.sv(24): inferring latch(es) for variable "imm", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[0]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[1]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[2]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[3]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[4]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[5]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[6]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "imm[7]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper3[0]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper3[1]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper3[2]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "EX[0]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "desType" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "regType[0]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "regType[1]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "regType[2]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper2[0]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper2[1]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper2[2]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper1[0]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper1[1]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (10041): Inferred latch for "oper1[2]" at Control_Unit.sv(24) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Control_Unit.sv Line: 24
+Info (12128): Elaborating entity "extendZero" for hierarchy "VectorProcessor:DUT|Decode_Stage:decS|extendZero:zeroExt" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv Line: 31
+Info (12128): Elaborating entity "File_Register" for hierarchy "VectorProcessor:DUT|Decode_Stage:decS|File_Register:regBank" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Decode_Stage.sv Line: 32
+Warning (10175): Verilog HDL warning at File_Register.sv(25): ignoring unsupported system task File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv Line: 25
+Warning (10175): Verilog HDL warning at File_Register.sv(30): ignoring unsupported system task File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/File_Register.sv Line: 30
+Info (12128): Elaborating entity "ID_EX" for hierarchy "VectorProcessor:DUT|ID_EX:pipeIdex" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 70
+Info (12128): Elaborating entity "EXEC_Stage" for hierarchy "VectorProcessor:DUT|EXEC_Stage:execS" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 71
+Info (12128): Elaborating entity "ALU_Control" for hierarchy "VectorProcessor:DUT|EXEC_Stage:execS|ALU_Control:controlALU" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv Line: 29
+Warning (10240): Verilog HDL Always Construct warning at ALU_Control.sv(16): inferring latch(es) for variable "operALUe", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv Line: 16
+Warning (10240): Verilog HDL Always Construct warning at ALU_Control.sv(16): inferring latch(es) for variable "operALUve", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv Line: 16
+Warning (10240): Verilog HDL Always Construct warning at ALU_Control.sv(16): inferring latch(es) for variable "operSum", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv Line: 16
+Info (10041): Inferred latch for "operSum" at ALU_Control.sv(16) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv Line: 16
+Info (10041): Inferred latch for "operALUve" at ALU_Control.sv(16) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv Line: 16
+Info (10041): Inferred latch for "operALUe" at ALU_Control.sv(16) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv Line: 16
+Info (12128): Elaborating entity "MUX_ALU" for hierarchy "VectorProcessor:DUT|EXEC_Stage:execS|MUX_ALU:exMux" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv Line: 40
+Info (12128): Elaborating entity "ALU" for hierarchy "VectorProcessor:DUT|EXEC_Stage:execS|ALU:aluE" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv Line: 41
+Warning (10240): Verilog HDL Always Construct warning at ALU.sv(11): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[0]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[1]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[2]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[3]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[4]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[5]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[6]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[7]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[8]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[9]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[10]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[11]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[12]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[13]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[14]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[15]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[16]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[17]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[18]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[19]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (10041): Inferred latch for "result[20]" at ALU.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv Line: 11
+Info (12128): Elaborating entity "ALU_VE" for hierarchy "VectorProcessor:DUT|EXEC_Stage:execS|ALU_VE:aluve" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(16): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(17): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(18): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(19): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(20): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(21): truncated value with size 21 to match size of target (15) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(22): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(23): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(24): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(25): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(26): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(27): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(28): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(29): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(30): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(31): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(32): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(33): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(34): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(35): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(36): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(37): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(38): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(39): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 39
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(42): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(43): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(44): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(45): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(46): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(47): truncated value with size 21 to match size of target (15) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 47
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(48): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(49): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(50): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(51): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(52): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 52
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(53): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 53
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(54): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(55): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(56): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(57): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(58): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(59): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(60): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(61): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(62): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(63): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 63
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(64): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(65): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(68): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(69): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(70): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(71): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(72): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(73): truncated value with size 21 to match size of target (15) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(74): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(75): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(76): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 76
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(77): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 77
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(78): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(79): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 79
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(80): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(81): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(82): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 82
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(83): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(84): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 84
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(85): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 85
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(86): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 86
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(87): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(88): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 88
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(89): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 89
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(90): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at ALU_VE.sv(91): truncated value with size 21 to match size of target (8) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 91
+Warning (10270): Verilog HDL Case Statement warning at ALU_VE.sv(14): incomplete case statement has no default case item File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 14
+Warning (10240): Verilog HDL Always Construct warning at ALU_VE.sv(11): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[0]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[1]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[2]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[3]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[4]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[5]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[6]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[7]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[8]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[9]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[10]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[11]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[12]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[13]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[14]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[15]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[16]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[17]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[18]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[19]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[20]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[21]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[22]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[23]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[24]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[25]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[26]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[27]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[28]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[29]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[30]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[31]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[32]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[33]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[34]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[35]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[36]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[37]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[38]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[39]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[40]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[41]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[42]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[43]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[44]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[45]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[46]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[47]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[48]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[49]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[50]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[51]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[52]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[53]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[54]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[55]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[56]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[57]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[58]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[59]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[60]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[61]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[62]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[63]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[64]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[65]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[66]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[67]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[68]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[69]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[70]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[71]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[72]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[73]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[74]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[75]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[76]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[77]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[78]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[79]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[80]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[81]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[82]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[83]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[84]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[85]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[86]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[87]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[88]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[89]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[90]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[91]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[92]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[93]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[94]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[95]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[96]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[97]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[98]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[99]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[100]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[101]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[102]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[103]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[104]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[105]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[106]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[107]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[108]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[109]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[110]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[111]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[112]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[113]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[114]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[115]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[116]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[117]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[118]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[119]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[120]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[121]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[122]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[123]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[124]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[125]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[126]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[127]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[128]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[129]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[130]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[131]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[132]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[133]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[134]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[135]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[136]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[137]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[138]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[139]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[140]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[141]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[142]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[143]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[144]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[145]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[146]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[147]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[148]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[149]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[150]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[151]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[152]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[153]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[154]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[155]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[156]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[157]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[158]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[159]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[160]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[161]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[162]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[163]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[164]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[165]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[166]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[167]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[168]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[169]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[170]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[171]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[172]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[173]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[174]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[175]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[176]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[177]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[178]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[179]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[180]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[181]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[182]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[183]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[184]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[185]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[186]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[187]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[188]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[189]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[190]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (10041): Inferred latch for "result[191]" at ALU_VE.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv Line: 11
+Info (12128): Elaborating entity "ADDER_VV" for hierarchy "VectorProcessor:DUT|EXEC_Stage:execS|ADDER_VV:addVV" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv Line: 43
+Warning (10240): Verilog HDL Always Construct warning at ADDER_VV.sv(11): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[0]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[1]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[2]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[3]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[4]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[5]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[6]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[7]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[8]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[9]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[10]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[11]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[12]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[13]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[14]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[15]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[16]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[17]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[18]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[19]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[20]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[21]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[22]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[23]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[24]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[25]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[26]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[27]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[28]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[29]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[30]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[31]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[32]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[33]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[34]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[35]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[36]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[37]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[38]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[39]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[40]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[41]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[42]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[43]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[44]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[45]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[46]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[47]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[48]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[49]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[50]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[51]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[52]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[53]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[54]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[55]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[56]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[57]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[58]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[59]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[60]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[61]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[62]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[63]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[64]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[65]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[66]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[67]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[68]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[69]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[70]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[71]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[72]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[73]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[74]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[75]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[76]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[77]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[78]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[79]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[80]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[81]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[82]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[83]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[84]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[85]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[86]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[87]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[88]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[89]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[90]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[91]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[92]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[93]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[94]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[95]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[96]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[97]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[98]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[99]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[100]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[101]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[102]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[103]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[104]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[105]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[106]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[107]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[108]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[109]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[110]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[111]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[112]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[113]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[114]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[115]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[116]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[117]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[118]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[119]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[120]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[121]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[122]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[123]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[124]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[125]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[126]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[127]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[128]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[129]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[130]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[131]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[132]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[133]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[134]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[135]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[136]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[137]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[138]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[139]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[140]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[141]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[142]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[143]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[144]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[145]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[146]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[147]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[148]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[149]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[150]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[151]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[152]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[153]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[154]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[155]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[156]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[157]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[158]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[159]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[160]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[161]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[162]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[163]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[164]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[165]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[166]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[167]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[168]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[169]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[170]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[171]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[172]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[173]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[174]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[175]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[176]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[177]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[178]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[179]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[180]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[181]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[182]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[183]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[184]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[185]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[186]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[187]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[188]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[189]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[190]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (10041): Inferred latch for "result[191]" at ADDER_VV.sv(11) File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv Line: 11
+Info (12128): Elaborating entity "EX_MEM" for hierarchy "VectorProcessor:DUT|EX_MEM:pipeExecMem" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 75
+Info (12128): Elaborating entity "MEM_Stage" for hierarchy "VectorProcessor:DUT|MEM_Stage:memS" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/VectorProcessor.sv Line: 77
+Info (12128): Elaborating entity "Data_Mem" for hierarchy "VectorProcessor:DUT|MEM_Stage:memS|Data_Mem:dataMem" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv Line: 34
+Warning (10235): Verilog HDL Always Construct warning at Data_Mem.sv(10): variable "opType" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Data_Mem.sv Line: 10
+Error (10054): Verilog HDL File I/O error at Data_Mem.sv(12): can't open Verilog Design File "C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/image.mem" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Data_Mem.sv Line: 12
+Error (12152): Can't elaborate user hierarchy "VectorProcessor:DUT|MEM_Stage:memS|Data_Mem:dataMem" File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv Line: 34
 Info (144001): Generated suppressed messages file C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/output_files/VectorProcessor.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4766 megabytes
-    Info: Processing ended: Tue Jun 01 11:56:06 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:22
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 94 warnings
+    Error: Peak virtual memory: 5155 megabytes
+    Error: Processing ended: Wed Jun 02 01:42:36 2021
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:24
 
 
 +--------------------------------------------+

@@ -1,11 +1,11 @@
 module Fetch_Stage (clk, pc_4, instr, pc_plus);
 	input logic clk;
-	input logic [20:0] pc_4;
+	input logic [19:0] pc_4;
 	 
-	output logic [20:0] instr;
-	output logic [20:0] pc_plus;
+	output logic [19:0] instr;
+	output logic [19:0] pc_plus;
 	
-	logic [20:0] pc;
+	logic [19:0] pc;
 	 
 	PC_Register pcNext(clk, pc_4, pc);
 	

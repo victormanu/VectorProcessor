@@ -1,5 +1,5 @@
 Flow report for VectorProcessor
-Tue Jun 01 11:56:06 2021
+Wed Jun 02 01:42:36 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Tue Jun 01 11:56:06 2021       ;
+; Flow Status                 ; Flow Failed - Wed Jun 02 01:42:36 2021      ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; VectorProcessor                             ;
 ; Top-level Entity Name       ; VectorProcessor_tb                          ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/01/2021 11:55:58 ;
+; Start date & time ; 06/02/2021 01:42:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VectorProcessor     ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-----------------+--------------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name        ; Section Id                        ;
 +-------------------------------------+----------------------------------------+-----------------+--------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 255543642473648.162257015802972        ; --              ; --                 ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 255543642473648.162261974509352        ; --              ; --                 ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --                 ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --                 ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --              ; --                 ; eda_board_design_signal_integrity ;
@@ -99,8 +99,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:08     ; 1.0                     ; 4766 MB             ; 00:00:22                           ;
-; Total                  ; 00:00:08     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 5155 MB             ; 00:00:24                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
