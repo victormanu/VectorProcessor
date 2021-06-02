@@ -1,9 +1,8 @@
-module ADDER_VV (op1, op2, flag, funct, result);
+module ADDER_VV (op1, op2, flag, result);
 	
 	input logic flag;
 	input logic [191: 0] op1;
 	input logic [191: 0] op2;
-	input logic [2: 0] funct;
 	
 	output logic [191:0] result = '{default:192'b0};
 	

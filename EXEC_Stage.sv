@@ -36,9 +36,8 @@ module EXEC_Stage (clk, exc, r1e, r2e, r1v, r2v, imm, resALUe, resALUve, resSum)
 			end
 		endcase
 	end
-	//ALU_Control controlALU (aluCrtl, operAlu, flagALUe, flagALUve, flagSum);
 	MUX_ALU exMux (r2e, imm, aluSrc, muxAlu);
-	ALU aluE(r1e, muxAlu, operAlu, flagALUe, resALUe);
-	ALU_VE aluve(r1e, muxAlu, operAlu, flagALUve, resALUve);
-	ADDER_VV addVV(r1v, r2v, operAlu, flagSum, resSum);
+	ALU aluE(r1e, muxAlu, flagALUe, operAlu, resALUe);
+	ALU_VE aluve(r1e, muxAlu, flagALUve, operAlu, resALUve);
+	ADDER_VV addVV(r1v, r2v, flagSum, resSum);
 endmodule 

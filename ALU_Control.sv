@@ -52,7 +52,11 @@ module ALU_Control (exec, opALU, operALUe, operALUve, operSum);
 						operALUve <= 1'b1;
 						operSum <= 1'b0;								
 					end
-					default: ;
+					3'b111: begin												// Operaciones Mult Escalar Escalar
+						operALUe <= 1'b1;
+						operALUve <= 1'b0;
+						operSum <= 1'b0;								
+					end
 				endcase
 			end
 			1'b1: begin

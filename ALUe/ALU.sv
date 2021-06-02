@@ -17,7 +17,9 @@ module ALU (op1, op2, flag, funct, result);
 					3'b010: // Addition
 						result = op1 + op2;
 					3'b011: // Substraction			
-						result = op1 - op2;			
+						result = op1 - op2;
+					3'b111: // Substraction			
+						result = op1 * op2;			
 					default: ;
 				endcase
 			end
