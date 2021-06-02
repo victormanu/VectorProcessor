@@ -20,5 +20,6 @@ module WB_Stage (clk, dest, destType ,memData, regE, regV, wb, wbEscalar, wbVect
 	assign wbEscalar = regE;
 	
 	MUX_WB muxwbv(memData, regV, slc, muxV);
+	assign wbVector = muxV;
 	File_Register regBank (clk, 4'b0, 4'b0, dest, regE, muxV, 1'b0, 1'b1, 2'b00, destType, r1e, r2e, r1v, r2v);
 endmodule  

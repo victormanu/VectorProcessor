@@ -1,6 +1,9 @@
-5
-6
-3
-4
-5
-1
+// memory data file (do not edit the following line - required for mem load use)
+// instance=/WB_tb/DUT/regBank/rfe
+// format=hex addressradix=h dataradix=h version=1.0 wordsperline=1 noaddress
+000000
+000000
+000000
+000000
+000000
+000000

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY Exec_tb
+set_global_assignment -name TOP_LEVEL_ENTITY Mem_tb
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:16:45  MAY 29, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -56,6 +56,9 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE Testbench/WB_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Testbench/DataMem_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Testbench/Mem_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Testbench/Exec_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Testbench/Decode_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Testbench/Fetch_tb.sv

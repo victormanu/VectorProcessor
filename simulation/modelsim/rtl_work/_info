@@ -8,185 +8,81 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/simulation/modelsim
-vADDER_VV
+vMEM_Stage
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1622657303
+Z2 !s110 1622666796
 !i10b 1
-!s100 SINA_=D26iN_2`cI3PF1F3
-IaU7ScT:HIlPfiO;o]M<;Z2
+!s100 6[:0ln`<SSzlPa88F;k?O3
+IV4n[l@Lzm5ZWU>6AThEh13
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 ADDER_VV_sv_unit
+!s105 MEM_Stage_sv_unit
 S1
 R0
-w1622654455
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv
+w1622666430
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1622657303.000000
-!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv|
+Z5 !s108 1622666796.000000
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv|
 !i113 1
 Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe
+Z7 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor
 Z8 tCvgOpt 0
-n@a@d@d@e@r_@v@v
-vALU
+n@m@e@m_@stage
+vMem_tb
 R1
-R2
+!s110 1622666795
 !i10b 1
-!s100 40b?n=Vj1aB4Nl1c:kLVh2
-IRh9`_7e10je`GD9K5V5jo3
+!s100 nZ<kWaO5<C4FbgAnfTO>C1
+I[NILO12JQ?nUl=iY70ZM]0
 R3
-!s105 ALU_sv_unit
+!s105 Mem_tb_sv_unit
 S1
 R0
-w1622654679
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv
+w1622666559
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Mem_tb.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Mem_tb.sv
 L0 1
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv|
-!i113 1
-R6
-R7
-R8
-n@a@l@u
-vALU_Control
-R1
-R2
-!i10b 1
-!s100 b;SZ5MN3WFFCI`Vh><TTR1
-IbbfQFPnAcJ95AJC3bTTLa0
-R3
-!s105 ALU_Control_sv_unit
-S1
-R0
-w1622654961
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv|
-!i113 1
-R6
-Z9 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor
-R8
-n@a@l@u_@control
-vALU_VE
-R1
-R2
-!i10b 1
-!s100 iT_NGMkEj=`[ZkMAm<g`22
-IKI8`NX5^P=2o3n4_YF6Hd2
-R3
-!s105 ALU_VE_sv_unit
-S1
-R0
-w1622566973
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv|
-!i113 1
-R6
-R7
-R8
-n@a@l@u_@v@e
-vEXEC_Stage
-R1
-R2
-!i10b 1
-!s100 9B5UE:j7NW<1kd9Xiz_cg2
-IS^7eH^z9;Lb;VEgaRReQT1
-R3
-!s105 EXEC_Stage_sv_unit
-S1
-R0
-w1622655052
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv|
-!i113 1
-R6
-R9
-R8
-n@e@x@e@c_@stage
-vExec_tb
-R1
-R2
-!i10b 1
-!s100 R@bT289ZdL9L7OKHXD]A^1
-IFSCK7@7fjJDC6UGzcA3;S0
-R3
-!s105 Exec_tb_sv_unit
-S1
-R0
-w1622657285
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Exec_tb.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Exec_tb.sv
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Exec_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Exec_tb.sv|
+!s108 1622666795.000000
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Mem_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Mem_tb.sv|
 !i113 1
 R6
 !s92 -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench
 R8
-n@exec_tb
-vMUX_ALU
+n@mem_tb
+vMUX_MEM
 R1
 R2
 !i10b 1
-!s100 <;hSU@L4Q8?m8IPboFoXO1
-I;JQLNkmBBb1OUUR_HlD<Q1
+!s100 gPOAE<22n@G?8`M_2_QMz1
+IL_bPdPPi;_6f2QHLnDRO]3
 R3
-!s105 MUX_ALU_sv_unit
+!s105 MUX_MEM_sv_unit
 S1
 R0
-w1622411844
-8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv
-FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv
+w1622648112
+8C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv
+FC:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv|
+!s107 C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor|C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv|
 !i113 1
 R6
 R7
 R8
-n@m@u@x_@a@l@u
+n@m@u@x_@m@e@m

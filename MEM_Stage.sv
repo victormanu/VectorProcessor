@@ -10,32 +10,38 @@ module MEM_Stage (clk, dirMem, data, mem, resALUve, resSum, data_out, mux_out);
 	output logic [191:0] mux_out;
 	
 	logic opType;
-	logic [1:0] funct;
+	logic funct;
 	logic [2:0] opCode;
+	logic [191:0] RAM[100:0]  = '{default:192'b0}; // 8192
 	
 	assign opCode = mem[2:0];
 	assign funct = mem[3];
 
 	
 	always @(posedge clk) begin
-		case(funct)
-			1'b0: ;
+		case(funct) 
+			1'b0: ; 
 			1'b1: begin
 				case(opCode)
 					3'b000: begin
-						opType = 0; //Load
+						$display("LoAD");
+						$readmemh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/image.mem", RAM);
+						data_out <= RAM[dirMem];
 					end
 					3'b001: begin
-						opType = 1; // Store
+						$display("Store"); 
+						$readmemh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/image.mem", RAM);
+						RAM[dirMem] = data;
+						$writememh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/image.mem", RAM);
 					end
 					default: ;
 				endcase 
 			end
-		endcase
+		endcase 
 	end
 	
 	MUX_MEM muxXmem(resSum, resALUve, opCode, mux_out);
-	Data_Mem dataMem(dirMem, data, opType, data_out);
+	//Data_Mem dataMem(dirMem, data, opType, data_out);
 	
 	
 endmodule 

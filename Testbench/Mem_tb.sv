@@ -1,20 +1,32 @@
 module Mem_tb ();
 
-	logic [19:0] instr;
+	logic clk;
+	logic [20:0] dirMem; 
+	logic [191:0] data;
+	logic [3:0] mem;
+	logic [191:0] resALUve;
+	logic [191:0] resSum;
 	
-	logic [4:0] EX;
-	logic [3:0] MEM;
-	logic [1:0] WB; 
-	logic [3:0] oper1;
-	logic [3:0] oper2;
-	logic [3:0] oper3;
-	logic [7:0] imm;
-	logic [1:0] regType;
-	logic desType;
+	logic [191:0] data_out;
+	logic [191:0] mux_out;
 	
-	Control_Unit DUT (instr, oper1, oper2, oper3, imm, EX, MEM, WB, regType, desType);
+	MEM_Stage DUT(clk, dirMem, data, mem, resALUve, resSum, data_out, mux_out);
 	
 	initial begin
-		instr = 20'h0D402;
+		#10;					// LOAD
+		dirMem = 0;
+		data = 2;
+		mem = 4'b1000; 
+		#10;					// STORE
+		dirMem = 3;
+		data = 192'h90aafe1706fe1700fe1704fe1703fe1745fe1764fe554433;
+		mem = 4'b1001;
+		#10;
 	end
-endmodule
+	always begin
+		clk = 1'b0;
+		#10;
+		clk = ~clk;
+		#10;
+	end
+endmodule 

@@ -20,6 +20,7 @@ module File_Register(clk, A1, A2, A3, wd3e, wd3v, Reg_Read, Reg_write, regType, 
 		if (Reg_write) begin						//Validación de señal de enable para la escritura.
 			case(desType)
 				1'b0: begin
+					$display("Guardar escalar");
 					$readmemh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/regBank.mem", rfe);
 					rfe[A3] = wd3e;
 					$writememh("C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/regBank.mem", rfe);

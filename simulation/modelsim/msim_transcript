@@ -10,102 +10,64 @@
 # Copying D:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Exec_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Mem_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:08:23 on Jun 02,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Exec_tb.sv 
-# -- Compiling module Exec_tb
+# Start time: 14:46:35 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/Testbench/Mem_tb.sv 
+# -- Compiling module Mem_tb
 # 
 # Top level modules:
-# 	Exec_tb
-# End time: 12:08:23 on Jun 02,2021, Elapsed time: 0:00:00
+# 	Mem_tb
+# End time: 14:46:35 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv}
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:08:23 on Jun 02,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ADDER_VV.sv 
-# -- Compiling module ADDER_VV
+# Start time: 14:46:36 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MUX_MEM.sv 
+# -- Compiling module MUX_MEM
 # 
 # Top level modules:
-# 	ADDER_VV
-# End time: 12:08:23 on Jun 02,2021, Elapsed time: 0:00:00
+# 	MUX_MEM
+# End time: 14:46:36 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv}
+# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:08:23 on Jun 02,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv 
-# -- Compiling module ALU_VE
+# Start time: 14:46:36 on Jun 02,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/MEM_Stage.sv 
+# -- Compiling module MEM_Stage
 # 
 # Top level modules:
-# 	ALU_VE
-# End time: 12:08:23 on Jun 02,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:08:23 on Jun 02,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/MUX_ALU.sv 
-# -- Compiling module MUX_ALU
-# 
-# Top level modules:
-# 	MUX_ALU
-# End time: 12:08:23 on Jun 02,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:08:23 on Jun 02,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU.sv 
-# -- Compiling module ALU
-# 
-# Top level modules:
-# 	ALU
-# End time: 12:08:23 on Jun 02,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:08:23 on Jun 02,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALU_Control.sv 
-# -- Compiling module ALU_Control
-# 
-# Top level modules:
-# 	ALU_Control
-# End time: 12:08:23 on Jun 02,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor {C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:08:23 on Jun 02,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor" C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv 
-# -- Compiling module EXEC_Stage
-# 
-# Top level modules:
-# 	EXEC_Stage
-# End time: 12:08:23 on Jun 02,2021, Elapsed time: 0:00:00
+# 	MEM_Stage
+# End time: 14:46:36 on Jun 02,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.Exec_tb
-# vsim work.Exec_tb 
-# Start time: 12:08:36 on Jun 02,2021
+vsim work.Mem_tb
+# vsim work.Mem_tb 
+# Start time: 14:46:40 on Jun 02,2021
 # Loading sv_std.std
-# Loading work.Exec_tb
-# Loading work.EXEC_Stage
-# Loading work.ALU_Control
-# Loading work.MUX_ALU
-# Loading work.ALU
-# Loading work.ALU_VE
-# Loading work.ADDER_VV
-# ** Warning: (vsim-3015) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(41): [PCDPC] - Port size (192) does not match connection size (21) for port 'op1'. The port definition is at: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv(1).
-#    Time: 0 ps  Iteration: 0  Instance: /Exec_tb/DUT/aluve File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/ALUe/ALU_VE.sv
-# ** Warning: (vsim-3839) C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(35): Variable '/Exec_tb/DUT/operAlu', driven via a port connection, is multiply driven. See C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv(29).
-#    Time: 0 ps  Iteration: 0  Instance: /Exec_tb/DUT File: C:/Users/victo/Desktop/pruebaQuartus/VectorProcessor/EXEC_Stage.sv
-add wave -position end  sim:/Exec_tb/clk
-add wave -position end  sim:/Exec_tb/exc
-add wave -position end  sim:/Exec_tb/r1e
-add wave -position end  sim:/Exec_tb/r2e
-add wave -position end  sim:/Exec_tb/r1v
-add wave -position end  sim:/Exec_tb/r2v
-add wave -position end  sim:/Exec_tb/imm
-add wave -position end  sim:/Exec_tb/resALUe
-add wave -position end  sim:/Exec_tb/resALUve
-add wave -position end  sim:/Exec_tb/resSum
+# Loading work.Mem_tb
+# Loading work.MEM_Stage
+# Loading work.MUX_MEM
+add wave -position end  sim:/Mem_tb/clk
+add wave -position end  sim:/Mem_tb/dirMem
+add wave -position end  sim:/Mem_tb/data
+add wave -position end  sim:/Mem_tb/mem
+add wave -position end  sim:/Mem_tb/resALUve
+add wave -position end  sim:/Mem_tb/resSum
+add wave -position end  sim:/Mem_tb/data_out
+add wave -position end  sim:/Mem_tb/mux_out
 run
-# End time: 12:12:03 on Jun 02,2021, Elapsed time: 0:03:27
-# Errors: 0, Warnings: 2
+# LoAD
+# Store
+# Store
+# Store
+# Store
+restart
+run
+# LoAD
+# Store
+# Store
+# Store
+# Store
+# End time: 14:48:34 on Jun 02,2021, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 0
